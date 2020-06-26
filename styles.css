@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+html,body{
+      font-family: "Montserrat";
+      text-align: center;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-family: "Montserrat-Bold";
+
+    }
+    p{
+      color: #8f8f8f;
+      font-size: 1.5rem;
+    }
+
+    /************* Headings ************/
+    .big-heading{
+      font-family: 'Fjalla One', sans-serif; ;
+      font-size:3.5rem;
+      line-height: 1.5;
+    }
+    .section-heading{
+      font-size: 3.5rem;
+      line-height: 1.5;
+    }
+
+    /************* title section *************/
+    #title{
+
+      /* we sat the text align center in the body but should
+      overide it if want it on the left */
+      text-align: left;
+    }
+
+/* This override the prevuis padding from container-fluir clas *spacing */
+    #title .container-fluid{
+      padding: 3% 15% 7%;
+    }
+
+    /* This class give every section padding */
+    .container-fluid{
+      padding: 3% 15%;
+    }
+  /* Sections */
+    .white-section{
+      background-color: #fff;
+    }
+    .colored-section{
+      background-color: #f37121;
+      /* white color for H1 */
+      color:#fff;
+    }
+
+    /************* Navigation bar *************/
+    .navbar {
+      padding: 0 0 4.5rem;
+    }
+    .navbar-brand{
+      font-family: "Ubuntu";
+      font-size: 2.5rem;
+      font-weight: bold;
+
+    }
+
+    .nav-item{
+      padding: 0 18px;
+    }
+    .nav-link{
+      font-size: 1.2rem;
+      font-family: "Montserrat-Light";
+    }
+    /************* Download Button *************/
+    .download-botton{
+      margin: 5% 3% 5% 0;
+    }
+
+    /************* Tittle image *************/
+    .title-img{
+      width: 110%;
+      height: 110%;
+      /* transform: rotate(25deg); */
+      position: absolute;
+      /* since the img has positioned we can move it around*/
+      right: 1%;
+    }
+     /************* feature section *************/
+    #features{
+      position: relative;
+      /* it work without z-index too cuz html puts
+      the relative position on the top absolute which is on the tittle image
+      to adjust the adjust how of ttille image show up simply
+      add bottom padding on its container exm: (.container-fluid botton-padd=7%)*/
+      /* z-index: 1; */
+    }
+    .feature-title{
+      font-size: 2rem;
+    }
+    .feature-box{
+      padding: 5%;
+    }
+
+    .feature-img{
+      width: 100px;
+      height: 100px;
+      padding: 0;
+    }
+    .icon{
+      color: #ef8172;
+      margin-bottom: 1rem;
+    }
+    .icon:hover{
+      color: #ff4c68;
+    }
+
+    /************* testimonials section *************/
+    #testimonials{
+      background-color: #ef8172;
+    }
+    .testimonial-text{
+      font-size: 3rem;
+      line-height: 1.5;
+
+    }
+    .testimonial-img{
+      width: 10%;
+      border-radius: 100%;
+      margin: 20px;
+    }
+    .service-img{
+      position: relative;
+
+    }
+    .carousel-inner img{
+    width: 100%;
+    height:100%;
+    }
+    /* this makes button go away from body text */
+    /* .carousel-item{
+      padding: 7% 15%;
+    } */
+  /************* Press Section *************/
+    #press{
+      background-color: #ef8172;
+      padding-bottom: 3%;
+    }
+    .press-logo{
+      width: 15%;
+      margin: 20px 20px 15px;
+    }
+
+    /************* Pricing section *************/
+    #pricing{
+      /* padding makes the pricing section not to be full edg */
+      padding: 100px;
+    }
+    .price-text{
+      font-size: 3rem;
+      line-height: 1.5;
+    }
+    .pricing-column{
+      padding: 3% 2%;
+    }
+
+
+  .my-new-img{
+
+  border-radius: 100%;
+  margin-bottom: 1rem;
+  }
+  hr{
+  border:dotted #EAF6F6 6px;
+  border-bottom:none;
+  width:4%;
+  margin: 50px auto 10px;
+
+  }
+  /************* contact section *************/
+
+
+
+    /************* footer section *************/
+    .social-icon{
+      margin: 20px 10px;
+    }
+    .t-icon{color:#00B6F1;}
+    .t-icon:hover{color:#00B6F1;}
+    .f-icon{color: #3B5998;}
+    .f-icon:hover{color:#0f5199;}
+    .i-icon{color:#2C6A93;}
+    .i-icon:hover{color: #8a3ab9;}
+    .m-icon{color:#040204;}
+    .m-icon:hover{color:#040204;}
+
+/* if the creen goes from pc to tablet and mobile mode */
+    @media (max-width: 1028px) {
+      #title{
+        /* this one is for another use case */
+        text-align: center;
+      }
+      #title .container-fluid{
+      padding-top: 2%;
+    }
+      .title-img{
+        position: static;
+        transform: rotate(0);
+      }
+      h1{
+        font-size: 2.5rem;
+      }
+      .navbar-brand{
+        font-size: 2rem;
+      }
+      /* we made the text-align to center but for nav bar we want left */
+      .navbar-nav{
+        text-align: left;
+      }
+      p{
+        font-size: 1.8rem;
+      }
+      .footer-text{
+        font-size: 1rem;
+      }
+
+
+    }
+
+    /*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
